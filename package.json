@@ -1,5 +1,6 @@
 {
   "name": "user-manager",
+  "homepage": "https://oakley808.github.io/user-manager",
   "author": "Michael Oakley",
   "license": "MIT",
   "version": "0.1.0",
@@ -18,6 +19,7 @@
     "hoist-non-react-statics": "^2.5.0",
     "immutable": "^3.8.2",
     "lodash": "^4.17.5",
+    "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.2.0",
@@ -30,6 +32,7 @@
     "redux-saga": "^0.16.0",
     "reselect": "^3.0.1",
     "sanitize.css": "^5.0.0",
+    "uuid": "^3.2.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -48,9 +51,135 @@
     "react-scripts": "1.1.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test --env=jsdom --coverage --setupTestFrameworkScriptFile='<rootDir>/src/utils/test-bundler.js'",
+    "test:watch": "react-scripts test --env=jsdom --watchAll --setupTestFrameworkScriptFile='<rootDir>/src/utils/test-bundler.js'",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/components/**/*.{js,jsx}",
+      "src/containers/**/*.{js,jsx}",
+      "!src/utils/**/*"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "env": {
+      "browser": true,
+      "node": true,
+      "jest": true,
+      "es6": true
+    },
+    "plugins": [
+      "react",
+      "redux-saga",
+      "jsx-a11y"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "rules": {
+      "arrow-parens": [
+        0,
+        "as-needed"
+      ],
+      "arrow-body-style": [
+        0,
+        "as-needed"
+      ],
+      "comma-dangle": [
+        2,
+        "always-multiline"
+      ],
+      "function-paren-newline": 0,
+      "import/extensions": 0,
+      "import/first": 0,
+      "import/newline-after-import": 0,
+      "import/no-extraneous-dependencies": 0,
+      "import/no-named-as-default": 0,
+      "import/no-dynamic-require": 0,
+      "import/no-unresolved": 2,
+      "import/no-webpack-loader-syntax": 0,
+      "import/prefer-default-export": 0,
+      "indent": [
+        2,
+        2,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "jsx-a11y/anchor-has-content": 0,
+      "jsx-a11y/anchor-is-valid": 0,
+      "jsx-a11y/aria-props": 2,
+      "jsx-a11y/heading-has-content": 0,
+      "jsx-a11y/href-no-hash": 0,
+      "jsx-a11y/label-has-for": 2,
+      "jsx-a11y/mouse-events-have-key-events": 2,
+      "jsx-a11y/no-noninteractive-tabindex": 0,
+      "jsx-a11y/no-static-element-interactions": 1,
+      "jsx-a11y/role-has-required-aria-props": 2,
+      "jsx-a11y/role-supports-aria-props": 2,
+      "max-len": 0,
+      "newline-per-chained-call": 0,
+      "new-cap": [
+        2,
+        {
+          "capIsNewExceptions": [
+            "Map",
+            "OrderedMap"
+          ]
+        }
+      ],
+      "no-console": 1,
+      "no-param-reassign": [
+        0,
+        {
+          "props": false
+        }
+      ],
+      "no-plusplus": 1,
+      "no-unused-vars": 0,
+      "no-use-before-define": 0,
+      "object-curly-newline": 0,
+      "prefer-template": 2,
+      "class-methods-use-this": 0,
+      "react/forbid-prop-types": 0,
+      "react/jsx-first-prop-new-line": [
+        2,
+        "multiline"
+      ],
+      "react/jsx-filename-extension": 0,
+      "react/jsx-max-props-per-line": 0,
+      "react/jsx-no-target-blank": 0,
+      "react/no-array-index-key": 0,
+      "react/no-unused-prop-types": 0,
+      "react/prop-types": 1,
+      "react/require-default-props": 0,
+      "react/require-extension": 0,
+      "react/self-closing-comp": 0,
+      "redux-saga/no-yield-in-race": 2,
+      "redux-saga/yield-effects": 2,
+      "require-yield": 0,
+      "sort-imports": 0
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "paths": [
+            "./node_modules",
+            "./src"
+          ]
+        }
+      }
+    }
   }
 }

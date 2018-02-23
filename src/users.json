@@ -1,0 +1,20 @@
+[
+  {
+    "id": "a2bab180-17da-11e8-8d5b-2936574e8713",
+    "first": "Michael",
+    "last": "Oakley",
+    "address": "123 Maple St. Anytown, CO"
+  },
+  {
+    "id": "aabab190-11e9-18da-8d5b-1136474f7711",
+    "first": "John",
+    "last": "Doe",
+    "address": "345 Oak St. Nowhere, CO"
+  },
+  {
+    "id": "bbbab190-8d5b-21e9-28da-2236474f7722",
+    "first": "John",
+    "last": "Doe",
+    "address": "345 Oak St. Nowhere, CO"
+  }
+]
