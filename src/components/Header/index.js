@@ -21,8 +21,8 @@ export default function Header({ pathname }) {
 
       <Navbar.Collapse>
         <Nav pullRight>
-          <NavItem componentClass={Link} eventKey={1} href="/" to="/" active={pathname === '/'}>Home</NavItem>
-          <NavItem componentClass={Link} eventKey={2} href="/about" to="/about" active={pathname === '/about'}>About</NavItem>
+          <NavItem componentClass={Link} eventKey={1} href={`${process.env.PUBLIC_URL}/`} to={`${process.env.PUBLIC_URL}/`} active={pathname === `${process.env.PUBLIC_URL}/`}>Home</NavItem>
+          <NavItem componentClass={Link} eventKey={2} href={`${process.env.PUBLIC_URL}/about`} to={`${process.env.PUBLIC_URL}/about`} active={pathname === `${process.env.PUBLIC_URL}/about`}>About</NavItem>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
