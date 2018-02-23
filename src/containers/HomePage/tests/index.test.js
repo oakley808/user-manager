@@ -57,13 +57,19 @@ describe('<HomePage> component', () => {
   });
 
   it('dispatches the addUser action when the save handler is called', () => {
-    renderedComponent.instance().handleSave();
+    const evt = {
+      preventDefault: () => {},
+    };
+    renderedComponent.instance().handleSave(evt);
     expect(addUserSpy).toHaveBeenCalled();
   });
 
   it('dispatches the updateUser action when the save handler is called', () => {
+    const evt = {
+      preventDefault: () => {},
+    };
     renderedComponent.setState({ currentUser: { id: '123' } });
-    renderedComponent.instance().handleSave();
+    renderedComponent.instance().handleSave(evt);
 
     expect(updateUserSpy).toHaveBeenCalled();
   });
@@ -81,6 +87,7 @@ describe('<HomePage> component', () => {
   it('sets local state properly when you edit a user', () => {
     const value = 'New First Name';
     const mockEvent = {
+      preventDefault: () => {},
       currentTarget: {
         name: 'first',
         value,
