@@ -7,7 +7,7 @@ import {
 } from 'react-bootstrap';
 
 const props = {
-  pathname: '/',
+  pathname: `${process.env.PUBLIC_URL}/`,
 };
 
 const renderedComponent = shallow(<Header {...props} />);

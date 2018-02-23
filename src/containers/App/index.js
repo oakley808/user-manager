@@ -26,14 +26,14 @@ export function App({ isLoading, location, userData }) {
         <Row>
           <Col md={10} mdPush={1}>
             <Switch>
-              <Route exact path="/" component={HomePage} />
-              <Route exact path="/about" component={AboutPage} />
+              <Route exact path={`${process.env.PUBLIC_URL}/`} component={HomePage} />
+              <Route exact path={`${process.env.PUBLIC_URL}/about`} component={AboutPage} />
             </Switch>
           </Col>
         </Row>
       </Grid>
 
-      <Footer count={userData.length} showCount={location.pathname === '/'} isLoading={isLoading} />
+      <Footer count={userData.length} showCount={location.pathname === `${process.env.PUBLIC_URL}/`} isLoading={isLoading} />
     </div>
   );
 }

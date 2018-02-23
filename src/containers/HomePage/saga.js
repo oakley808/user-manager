@@ -19,7 +19,7 @@ export default function* getAllDataWatcher() {
  *  Primary worker saga
  */
 export function* getData() {
-  const requestURL = 'https://oakley808.github.io/user-manager/users.json';
+  const requestURL = 'https://gist.githubusercontent.com/oakley808/69ebfe13f72653a5b8ed02ea4d9e2a18/raw/3530e1d100c8872bd7aee42c1ed4f8f94eab51f8/users.json';
 
   try {
     const data = yield call(request, requestURL);
