@@ -17,6 +17,8 @@ import configureStore from './configureStore';
 
 // Import CSS reset and global styles
 import 'sanitize.css/sanitize.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
 import './index.css';
 
 
