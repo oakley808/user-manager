@@ -119,6 +119,8 @@ export class HomePage extends React.Component {
   render() {
     const { isLoading, loadingError, userData } = this.props;
 
+    const spinner = (<span><i className="fas fa-spinner fa-spin"></i></span>);
+
     return (
       <div>
         {loadingError &&
@@ -134,9 +136,9 @@ export class HomePage extends React.Component {
           onClick={this.handleShowModal}
         >
           {isLoading
-            ? <span><i className="fas fa-spinner fa-spin"></i> Loading...</span>
-            : <span><Glyphicon glyph="plus" /> Add New User</span>
-          }
+            ? spinner
+            : <Glyphicon glyph="plus" />
+          } Add New User
         </Button>
 
 

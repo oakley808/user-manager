@@ -21,3 +21,7 @@ body {
 .user-table {
   margin-top: 2em;
 }
+
+.badge.bg-danger {
+  background-color: #ff0000;
+}
