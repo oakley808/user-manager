@@ -148,6 +148,10 @@ export class HomePage extends React.Component {
           handleShowConfirmModal={this.handleShowConfirmModal}
         />
 
+        <p>
+          A basic example that fetches data each time the page/route is mounted using redux-sagas.
+          (Data changes are not persisted)
+        </p>
 
         <Modal id="modal-delete" show={this.state.showConfirm} onHide={this.handleCloseModal}>
           <Modal.Header closeButton>
