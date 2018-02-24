@@ -32,6 +32,7 @@ A unit test coverage report can be found at `user-manager/coverage/lcov-report/i
 * More form validation
 * Wrap `<ErrorBoundary>` around page(s)
 * Make running unit tests also run linter
+* Persist data 
 
 ## Questions
 Questions? Feel free to file an issue in the Github issue tracker.
