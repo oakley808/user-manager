@@ -6,7 +6,7 @@ import { App, mapStateToProps } from '../index';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import { AboutPage } from 'containers/AboutPage';
-import { Route } from 'react-router';
+import { Route } from 'react-router-dom';
 
 
 const props = {
