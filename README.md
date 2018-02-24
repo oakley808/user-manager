@@ -1,7 +1,7 @@
 # User-manager
 A demo react app that manages users.
 
-<img src="screenshot.png" alt="Screenshot of app" />
+<img src="screenshot-home-page.png" alt="Screenshot of app" />
 
 ## Installation
 ```
@@ -13,18 +13,19 @@ yarn install
 Run `yarn run start` and open a browser to http://localhost:3001
 
 ## Deployment
-Build and push the `/build/` directory to GitHub pages.
 ```
-yarn run build
-git subtree push --prefix build origin gh-pages
+yarn run deploy
 ```
-Your app will be deployed at `https://<username>.github.io/user-manager/`
+The `/build/` directory will be pushed to a `gh-pages` branch and published to GitHub pages. Your app will be at: `https://<username>.github.io/user-manager/`
 
 
 ## Testing
 Run `yarn run test` or `yarn run test:watch`
 
-Unit test coverage can be found at `user-manager/coverage/lcov-report/index.html`
+A unit test coverage report can be found at `user-manager/coverage/lcov-report/index.html`
+
+<img src="screenshot-unit-testing.png" alt="Screenshot testing coverage" />
+
 
 ## Todo
 * Add a pre-commit git hook to lint code and pre-push to run unit tests
