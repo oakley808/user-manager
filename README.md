@@ -1,6 +1,7 @@
 # User-manager
 A demo react app that manages users.
 
+<img src="screenshot.png" alt="Screenshot of app" />
 
 ## Installation
 ```
